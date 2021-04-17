@@ -1,2 +1,2 @@
 # A Awesome Quiz Application
-https://github.com/or-obaidullah/quiz-app/
+https://or-obaidullah.github.io/quiz-app/
