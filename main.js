@@ -55,9 +55,9 @@ startQuiz.addEventListener('click', () => {
     startQuiz.style.display = 'none';
 
 
-    let count = quizDB.length * 60;
-    timeSpan.innerHTML = `00:0${quizDB.length}:00`;
-    let interval = setInterval(() => {
+    let count = quizDB.length * 20;
+    timeSpan.innerHTML = `00:0${Math.floor(count / 60)}:${count % 60}`;
+        interval = setInterval(() => {
         let seconds = count % 60;
         let minutes = Math.floor(count / 60);
         if (minutes < 10) {
@@ -118,8 +118,8 @@ submit.addEventListener('click', () => {
             showScore.innerHTML = `<p>You score: ${score}/${quizDB.length} ✌</p>
             <button class="btn" onClick="location.reload()">Play Again</button>`;
             showScore.className = 'scoreArea';
-            // submit.disabled = true;
-            submit.trigger('click');
+            submit.disabled = true;
+            clearInterval(interval);
         }
     } else if (timeSpan.innerHTML == '00:00:00') {
         showScore.innerHTML = `<p>You score: ${score}/${quizDB.length} ✌</p>
