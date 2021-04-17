@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* font-weight: 300; */
 }
 /* html{
     font-size: 62.5%;
 } */
+
 .main-div{
     /* width: 100vw; */
     min-height: 100vh;
@@ -15,12 +16,36 @@
     place-items: center;
     background: hsl(206, 92%, 94%);
 }
+/* h1{
+    width: 100vw;
+    text-align: center;
+} */
+.start-quiz{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 .inner-div{
     /* width: 60vw; */
     background: #fff;
     padding: 3rem 5rem;
     border-radius: 1rem;
     box-shadow: 0 1rem 1rem -0.7rem rgba(0, 0, 0, 0.4);
+    position: relative;
+    display: none;
+}
+.time-left{
+    position: absolute;
+    right: 35px;
+    top:15px;
+}
+#time-span{
+    background: #000;
+    color: #fff;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-radius: 5px;
 }
 .inner-div h2{
     font-size: 2rem;
